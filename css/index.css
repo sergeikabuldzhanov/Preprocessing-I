@@ -171,9 +171,25 @@ html {
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 500px) {
+  .main-container header nav {
+    flex-flow: column wrap;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
 .main-container header nav a {
   color: white;
   text-decoration: none;
+}
+@media (max-width: 500px) {
+  .main-container header nav a {
+    text-align: center;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 2px solid white;
+  }
 }
 .main-container .content {
   font-family: "Open Sans", sans-serif;
@@ -187,6 +203,11 @@ html {
   color: black;
   padding: 40px 0px;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .main-container .content #about p {
+    width: 90%;
+  }
 }
 .main-container .content section {
   width: 100%;

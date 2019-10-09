@@ -107,9 +107,21 @@ html{
 			margin: 15px auto;
 			display: flex;
 			justify-content: space-evenly;
+			@media(max-width:500px){
+				flex-flow: column wrap;
+				align-items: center;
+				width: 95%;
+				margin: 0 auto;
+			}
 			a{
 				color: white;
 				text-decoration: none;
+				@media(max-width: 500px){
+					text-align: center;
+					width: 100%;
+					padding: 10px 20px;
+					border-bottom: 2px solid white;
+				}
 			}
 		}
 	}
@@ -125,6 +137,11 @@ html{
 			color: black;
 			padding: 40px 0px;
 			width: 100%;
+			p{
+				@media(max-width: 500px){
+					width: 90%;
+				}
+			}
 		}
 
 		section{
@@ -221,10 +238,11 @@ html{
 	footer{
 		text-align: center;
 		padding: 20px 0;
+
 		span,a{
-			color: white;
-			text-decoration: none;
-			margin: 0 20px;
+				color: white;
+				text-decoration: none;
+				margin: 0 20px;
 		}
 	}
 }
