@@ -1,1 +1,313 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 65%;
+}
+.flex-mixin {
+  display: flex;
+  flex-flow: column wrap;
+}
+.borders {
+  border-radius: 15px;
+  border: 2px solid white;
+}
+.main-container {
+  width: 100%;
+  background: #e84855;
+  color: white;
+  font-size: 1.8rem;
+  font-family: "Open Sans", sans-serif;
+}
+.main-container header {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-around;
+}
+.main-container header .intro {
+  font-size: 4rem;
+  font-family: "Chivo", sans-serif;
+  margin: 30px auto;
+}
+.main-container header .intro p {
+  text-align: center;
+}
+.main-container header nav {
+  width: 70%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .main-container header nav {
+    flex-flow: column wrap;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+.main-container header nav a {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 500px) {
+  .main-container header nav a {
+    text-align: center;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 2px solid white;
+  }
+}
+.main-container .content {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  text-align: center;
+}
+.main-container .content #about {
+  background-color: white;
+  color: black;
+  padding: 40px 0px;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .main-container .content #about p {
+    width: 90%;
+  }
+}
+.main-container .content section {
+  width: 100%;
+  padding: 10px 0px 20px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.main-container .content section h2 {
+  font-size: 3rem;
+  margin: 10px 0px 10px 0px;
+  width: 100%;
+}
+.main-container .content section .skill-card {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+  border-radius: 15px;
+  border: 2px solid white;
+  border-radius: 100%;
+  margin: 10px auto;
+}
+.main-container .content section .skill-card h3 {
+  font-size: 2.5rem;
+}
+.main-container .content section .skill-card img {
+  width: 64px;
+  height: 64px;
+  margin: 0px auto 10px;
+}
+.main-container .content #skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-container .content #work-history {
+  background-color: #3185fc;
+}
+.main-container .content #work-history .work-card {
+  border-radius: 15px;
+  border: 2px solid white;
+  margin: 10px auto;
+}
+.main-container .content #work-history .work-card h3 {
+  margin: 10px;
+}
+.main-container .content #work-history .work-card p {
+  text-align: left;
+  margin: 10px;
+}
+.main-container .content #contact {
+  color: black;
+  background-color: white;
+}
+.main-container .content #contact .contact-form {
+  width: 95%;
+  max-width: 500px;
+  padding: 25px;
+  margin: 50px auto;
+}
+.main-container .content #contact .contact-form button {
+  display: block;
+  background-color: white;
+  font-size: 1.8rem;
+  padding: 10px 25px;
+  border-radius: 10px;
+  margin: auto;
+}
+.main-container .content #contact .contact-form button:hover {
+  background: #3185fc;
+  color: white;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.main-container .content #contact .contact-form fieldset {
+  border: medium none;
+  margin: 0 0 10px;
+  padding: 0;
+  width: 100%;
+}
+.main-container .content #contact .contact-form fieldset input,
+.main-container .content #contact .contact-form fieldset textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+.main-container .content #contact .contact-form fieldset input:hover,
+.main-container .content #contact .contact-form fieldset textarea:hover {
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+.main-container footer {
+  text-align: center;
+  padding: 20px 0;
+}
+.main-container footer span,
+.main-container footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}

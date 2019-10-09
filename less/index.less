@@ -57,3 +57,193 @@ html, body {
     height: 100%;
 }
 
+//Variables
+
+//Fonts
+@header-font-family: "Chivo", sans-serif;
+@regular-font-family: "Open Sans", sans-serif;
+
+@regular-font-size: 1.8rem;
+@h2-font-size: 3rem;
+@h3-font-size: 2.5rem;
+@header-font-size: 4rem;
+@nav-font-size: 2rem;
+
+//Font-size set
+html{
+	font-size: 65%;
+}
+
+.flex-mixin{
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.borders{
+	border-radius: 15px;
+	border: 2px solid white;
+}
+
+.main-container{
+	width: 100%;
+	background: #e84855;
+	color: white;
+	font-size: @regular-font-size;
+	font-family: @regular-font-family;
+	header{
+		display: flex;
+		flex-flow: column wrap;
+		align-content: space-around;
+		.intro{
+			font-size: @header-font-size;
+			font-family: @header-font-family;
+			margin: 30px auto;
+			p{
+				text-align: center;
+			}
+		}
+		nav{
+			width: 70%;
+			margin: 15px auto;
+			display: flex;
+			justify-content: space-evenly;
+			@media(max-width:500px){
+				flex-flow: column wrap;
+				align-items: center;
+				width: 95%;
+				margin: 0 auto;
+			}
+			a{
+				color: white;
+				text-decoration: none;
+				@media(max-width: 500px){
+					text-align: center;
+					width: 100%;
+					padding: 10px 20px;
+					border-bottom: 2px solid white;
+				}
+			}
+		}
+	}
+	.content{
+		font-family: @regular-font-family;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: flex-start;
+		text-align: center;
+
+		#about{
+			background-color: white;
+			color: black;
+			padding: 40px 0px;
+			width: 100%;
+			p{
+				@media(max-width: 500px){
+					width: 90%;
+				}
+			}
+		}
+
+		section{
+			width: 100%;
+			padding: 10px 0px 20px 0px;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			h2{
+				font-size: @h2-font-size;
+				margin: 10px 0px 10px 0px;
+				width: 100%;
+			}
+
+			.skill-card{
+				display: flex;
+				flex-flow: column wrap;
+				justify-content: center;
+				width: 220px;
+				height: 220px;
+				.borders();
+				border-radius: 100%;
+				margin: 10px auto;
+				h3{
+					font-size: @h3-font-size;
+				}
+				img{
+					width: 64px;
+					height: 64px;
+					margin: 0px auto 10px;
+				}
+			}
+		}
+		#skills{
+			display: flex;
+			flex-wrap: wrap;
+
+		}
+		#work-history{
+			background-color: #3185fc;
+			.work-card{
+				.borders();
+				margin: 10px auto;
+				h3{
+					margin: 10px;
+				}
+				p{
+					text-align: left;
+					margin: 10px;
+				}
+			}
+		}
+		#contact{
+			color: black;
+			background-color: white;
+			.contact-form{
+				width: 95%;
+				max-width: 500px;
+				padding: 25px;
+				margin: 50px auto;
+				button{
+					display: block;
+					background-color: white;
+					font-size: @regular-font-size;
+					padding: 10px 25px;
+					border-radius: 10px;
+					margin: auto;
+				}
+				button:hover{
+					background: #3185fc;
+					color: white;
+					transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+				}
+				fieldset {
+					border: medium none;
+					margin: 0 0 10px;
+					padding: 0;
+					width: 100%;
+					input, textarea {
+						width: 100%;
+						border: 1px solid #ccc;
+						background: #FFF;
+						margin: 0 0 5px;
+						padding: 10px;
+					}
+					input:hover, textarea:hover{
+						transition: border-color 0.3s ease-in-out;
+						border: 1px solid #aaa;
+					}
+				}
+			}
+		}
+	}
+	footer{
+		text-align: center;
+		padding: 20px 0;
+
+		span,a{
+				color: white;
+				text-decoration: none;
+				margin: 0 20px;
+		}
+	}
+}
+
